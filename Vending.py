@@ -2,13 +2,13 @@
 
 #Vending machine stock and prize
 
-#Snacks
+#Basics
 
-#Cookies = 3
-#Croissant = 5
-#Saltine Crackers = 2
-#Biscuits = 3
-#Sandwich = 7
+#TShirt = 20
+#CargoPants = 50
+#LongTShirt = 25
+#Shorts = 25
+#TankTop = 15
 
 #Hot Drinks
 #Coffee = 2
@@ -24,17 +24,17 @@
 #Mixed Fruit Juice = 5
 
 #This part shows the user the snack type, name, price, the remaining quantity left, and the code for in the machine, basically this is the first thing that a user would see
-print ("""Welcome! Written below is the list of snacks and drinks available.
+print ("""Welcome! Written below is the list of Basics and drinks available.
 Type in the code of your order to confirm""")
 
 vending_machine_stock = """
-Snacks:
+Basics:
 Name:                Price:                    Code:
-Cookies---------------3DHS----------------------s1
-Croissant-------------5DHS----------------------s2
-Saltine Crackers------2DHS----------------------s3
-Biscuits--------------3DHS----------------------s4
-Sandwich--------------7DHS----------------------s5
+TShirt---------------20DHS----------------------s1
+CargoPants-------------50DHS----------------------s2
+LongTShirt------25DHS----------------------s3
+Shorts--------------25DHS----------------------s4
+TankTop--------------15DHS----------------------s5
 
 Hot Drinks:
 Name:                Price:                    Code:
@@ -76,12 +76,12 @@ Refunding amount of""", money, """DHS
 
 
 #Price
-#Snacks
-Cookies = 3
-Croissant = 5
-Saltine_crackers = 2
-Biscuits = 3
-Sandwich = 7
+#Basics
+TShirt = 20
+CargoPants = 50
+LongTShirts = 25
+Shorts = 25
+TankTop = 15
 #Hot drinks
 Coffee = 2
 Black_Tea = 1
@@ -98,64 +98,63 @@ Mixed_fruit_juice = 5
 #this part is where the whole system or unit of the code process the request/s of the user
 
 
-#Snacks
+#
 def s1():
-  if money >= Cookies:
-     money_to_return = money - Cookies
-     print("""Your order of Cookies is being processed
+  if money >= TShirt:
+     money_to_return = money - TShirt
+     print("""Your order of T-Shirt is being processed
      Please wait
-     dispensing Cookies
+     dispensing T-Shirt
      You have a change of""", money_to_return, """DHS
      Thank you for using this vending machine""")
   else:
      print("The amount you have input is insufficient for the chosen product")
 
 def s2():
-  if money >= Croissant:
-     money_to_return = money - Croissant
-     print("""Your order of Croissant is being processed
+  if money >= CargoPants:
+     money_to_return = money - CargoPants
+     print("""Your order of Cargo Pants is being processed
      Please wait
-     dispensing Croissant
+     dispensing Cargo Pants
      You have a change of""", money_to_return, """DHS
      Thank you for using this vending machine""")
   else:
      print("The amount you have input is insufficient for the chosen product")
 
 def s3():
-  if money >= Saltine_crackers:
-     money_to_return = money - Saltine_crackers
-     print("""Your order of Saltine crackers is being processed
+  if money >= LongTShirts:
+     money_to_return = money - LongTShirts
+     print("""Your order of Long T-Shirt is being processed
      Please wait
-     Dispensing Saltine Crackers
+     Dispensing Long T-Shirt
      You have a change of""", money_to_return, """DHS
      Thank you for using this vending machine""")
   else:
      print("The amount you have input is insufficient for the chosen product")
 
 def s4():
-  if money >= Biscuits:
-     money_to_return = money - Biscuits
-     print("""Your order of Biscuits is being processed
+  if money >= Shorts:
+     money_to_return = money - Shorts
+     print("""Your order of Shorts is being processed
      Please wait
-     Dispensing Biscuits
+     Dispensing Shorts
      You have a change of""", money_to_return, """DHS
      Thank you for using this vending machine""")
   else:
      print("The amount you have input is insufficient for the chosen product")
 
 def s5():
-  if money >= Sandwich:
-     money_to_return = money - Sandwich
-     print("""Your order of Sandwich is being processed
+  if money >= TankTop:
+     money_to_return = money - TankTop
+     print("""Your order of Tank Top is being processed
      Please wait
-     Dispensing Sandwich
+     Dispensing Tank Top
      You have a change of""", money_to_return, """DHS
      Thank you for using this vending machine""")
   else:
      print("The amount you have input is insufficient for the chosen product")
 
-#hot drinks
-#in the hot drinks section have a longer line of code to accommodate suggestions that for me are appropriate from the snacks section
+#
 def h1():
   if money >= Coffee:
      money_to_return = money - Coffee
@@ -163,12 +162,12 @@ def h1():
      Please wait
      Dispensing Coffee
      You have a change of""", money_to_return, "DHS")
-     offer = input("""Would you like a Croissant to go with your Coffee? (input "yes" or "no" ) """)
+     offer = input("""Would you like a Cargo Pants to go with your Coffee? (input "yes" or "no" ) """)
   if offer == "yes":
-     offer_price = money_to_return - Croissant
-     print("""your additional order of Croissant is being processed
+     offer_price = money_to_return - CargoPants
+     print("""your additional order of Cargo Pants is being processed
      Please wait
-     Dispensing Croissant
+     Dispensing Cargo Pants
      You have a change of""", offer_price, "DHS")
   elif offer == "no":
     print("""You have a change of""", money_to_return, """DHS
@@ -184,12 +183,12 @@ def h2():
      Please wait
      Dispensing Black Tea
      You have a change of""", money_to_return, "DHS")
-     offer = input("""Would you like Saltine Crackers to go with your Black Tea? (input "yes" or "no" ) """)
+     offer = input("""Would you like Long T-Shirt to go with your Black Tea? (input "yes" or "no" ) """)
   if offer == "yes":
      offer_price = money_to_return - Saltine_crackers
-     print("""your additional order of Saltine Crackers is being processed
+     print("""your additional order of Long T-Shirt is being processed
      Please wait
-     Dispensing Saltine Crackers
+     Dispensing Long T-Shirt
      You have a change of""", offer_price, "DHS")
   elif offer == "no":
     print("""You have a change of""", money_to_return, """DHS
@@ -207,10 +206,10 @@ def h3():
      You have a change of""", money_to_return, "DHS")
      offer = input("""Would you like a biscuit to go with your Karak Tea? (input "yes" or "no" ) """)
   if offer == "yes":
-     offer_price = money_to_return - Biscuits
-     print("""your additional order of Biscuits is being processed
+     offer_price = money_to_return - Shorts
+     print("""your additional order of Shorts is being processed
      Please wait
-     Dispensing Biscuits
+     Dispensing Shorts
      You have a change of""", offer_price, "DHS")
   elif offer == "no":
     print("""You have a change of""", money_to_return, """DHS
@@ -219,7 +218,7 @@ def h3():
   else:
      print("The amount you have input is insufficient for the chosen product")
 
-#cold drinks
+#
 
 def c1():
   if money >= Bottled_water:
@@ -287,7 +286,7 @@ def c6():
   else:
      print("The amount you have input is insufficient for the chosen product")
 
-#snacks
+#
 if product_code == "s1":
    s1()
 elif product_code == "s2":
@@ -321,41 +320,7 @@ elif product_code == "c6":
 else:
   print("Error! Invalid Code")
 
-#additional info, note the difference between the line of code for a product without a recommendation and with a recommendation
 
-#Code without recommendation
 
-#def c1():
-  #if money >= Bottled_water:
-     #money_to_return = money - Bottled_water
-     #print("""Your order of a bottled water is being processed
-     #Please wait
-     #dispensing Bottled water
-     #You have a change of""", money_to_return, """DHS
-     #Thank you for using this vending machine""")
-  #else:
-     #print("The amount you have input is insufficient for the chosen product")
 
-#Code with recommendation
-
-#def c2():
-#if money >= Iced_Tea:
-     #money_to_return = money - Iced_Tea
-     #print("""Your order of Iced Tea is being processed
-     #Please wait
-     #Dispensing Iced Tea
-     #You have a change of""", money_to_return, "DHS")
-     #offer = input("""Would you like a Sandwich to go with your Iced Tea? (input "yes" or "no" ) """)
-  #if offer == "yes":
-     #offer_price = money_to_return - Sandwich
-     #print("""your additional order of Sandwich is being processed
-     #Please wait
-     #Dispensing Sandwich
-     #You have a change of""", offer_price, "DHS")
-  #elif offer == "no":
-    #print("""You have a change of""", money_to_return, """DHS
-    #Thank you for using this vending machine""")
-  
-  #else:
-     #print("The amount you have input is insufficient for the chosen product")
      
